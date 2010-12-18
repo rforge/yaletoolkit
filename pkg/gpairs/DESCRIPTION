@@ -5,6 +5,7 @@ Title: Generalized Pairs Plots
 Author: John W. Emerson and Walton Green
 Maintainer: John W. Emerson <john.emerson@yale.edu>
 Depends: barcode, grid, lattice, vcd, MASS, colorspace
+Enhances: YaleToolkit
 Description: Produces a generalized pairs (gpairs) plot.
 License: GPL (>= 2)
 Copyright: (C) 2010 John W. Emerson and Walton A. Green
