@@ -1,12 +1,12 @@
 Package: YaleToolkit
 Version: 4.0
-Date: 2010-12-16
+Date: 2011-06-27
 Title: Data exploration tools from Yale University.
 Author: John W. Emerson and Walton A. Green
 Maintainer: John W. Emerson <john.emerson@yale.edu>
 Depends: barcode, gpairs, grid, lattice, vcd, MASS, colorspace
 Description: This collection of data exploration tools was developed at
         Yale University for the graphical exploration of complex
-        multivariate data; barcode and gpairs how have their own packages.
+        multivariate data; barcode and gpairs now have their own packages.
 License: GPL (>= 2)
-Copyright: (C) 2010 John W. Emerson and Walton Green
+Copyright: (C) 2011 John W. Emerson and Walton Green

@@ -14,7 +14,7 @@ barcode(x, outer.margins = list(bottom = unit(2, "lines"),
         labelloc = TRUE, axisloc = TRUE, labelouter = FALSE, 
         newpage = TRUE, fontsize = 9, ptsize = unit(0.25, "char"), 
         ptpch = 1, bcspace = NULL, use.points = FALSE, buffer = 0.02,
-        log = FALSE)
+        log = FALSE, outerbox = TRUE)
 
 barcode.panel(x, horizontal = TRUE, xlim = NULL, labelloc = TRUE, axisloc = TRUE, 
               labelouter = FALSE, nint = 0, fontsize = 9, 
@@ -44,13 +44,14 @@ display.}
   \item{xlaboffset}{used for tuning the position of the label of the quantitative variable; needs to be a \code{unit}.}
   \item{buffer}{an additional proportion of empty space added to the right and left of the barcode, to avoid having the maximum and minimum on the frame of the plot.}
   \item{log}{if \code{TRUE}, use the log scale for the y-axis of the histogram-like part of the barcodes.}
+  \item{outerbox}{if \code{TRUE}, plot a box around the display.}
 }
 \details{
 The barcode plot aids in comparing distributions. It shares some of the characteristics of side-by-side histograms or boxplots, and of rugs or stripplots. We have found it particularly useful with clumped data, when other methods obscure detail.
 }
 \references{Chambers, J. M. and Hastie, T. J. (1992) \emph{Statistical Models in S}. Wadsworth \& Brooks/Cole.}
-\author{John W. Emerson and Walton Green}
-\note{John Hartigan designed and implemented an early version of the barcode plot. This implementation using \code{grid} graphics adds some useful options and is better suited for general distribution.}
+\author{John W. Emerson and Walton A. Green and John A. Hartigan}
+\note{John Hartigan designed and implemented an early version of the barcode plot. The implementation provided here uses \code{grid} graphics, adds some useful options, and is better suited for general distribution.}
 \seealso{\code{\link[YaleToolkit]{YaleToolkit}}, \code{\link[gpairs]{gpairs}}, \code{\link{rug}}, \code{\link{stripplot}}}
 \examples{
 # Simulate some data:

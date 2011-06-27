@@ -18,7 +18,8 @@
                       bcspace=NULL,
                       use.points=FALSE,
                       buffer=0.02,
-                      log=FALSE
+                      log=FALSE,
+                      outerbox=TRUE
               ) {
 
   if (!require(grid)) stop("library(grid) is required and unavailable.\n\n")
@@ -86,7 +87,7 @@
                       just=thisjust, angle=thisangle,
                       name="main", clip="off")
   pushViewport(vp.main)
-  grid.rect()
+  if (outerbox) grid.rect()
 
   barcode.panel(x, horizontal=horizontal, nint=nint, xlim=xlim,
                 labelloc=labelloc, labelouter=labelouter,

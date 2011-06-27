@@ -8,15 +8,15 @@
 \description{
   This collection of data exploration tools was developed
   at Yale University for the graphical exploration of complex
-  multivariate data. The main functions provided  are \code{barcode()},
+  multivariate data. The main functions provided are \code{barcode()},
   \code{gpairs()}, \code{whatis()}, and \code{sparkmat()}.
 }
 \details{
   \tabular{ll}{
     Package: \tab YaleToolkit\cr
     Type: \tab Package\cr
-    Version: \tab 3.2\cr
-    Date: \tab 2010-04-23\cr
+    Version: \tab 4.0\cr
+    Date: \tab 2011-06-27\cr
     License: \tab GPL version 2 or newer\cr
   }
   See individual help files for more information about the functions \code{barcode()},
@@ -37,7 +37,6 @@ Alternatively, we could hardcode the barcode rotation.\cr
 without support for ellipses in grid, we're tabling this for the moment.\cr
     passim: \tab make use of single and double quotation marks consistant.\cr
   }
-  Version 3.1 is the second (beta, if you will) version released to CRAN.
 Please get in touch with us if you note any problems.
 
 Note that some terminology from Paul Murrell's \code{grid} package is used throughout the documentation. Users unfamiliar with \code{grid} concepts should probably look at \code{\link{unit}} before reading our help files.
