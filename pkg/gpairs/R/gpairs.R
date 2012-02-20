@@ -476,7 +476,7 @@ boxplot.panel <- function(x, y, type, axis.pars, xpos, ypos, xylim) {
                    gp=gpar(box.umbrella=list(col="black")))
     if (type=="stripplot")
       panel.stripplot(cont.var, cat.var, horizontal=horiz,
-                      jitter=stripplot.pars$jitter,
+                      jitter.data=stripplot.pars$jitter,
                       col=stripplot.pars$col,
                       cex=stripplot.pars$size,
                       pch=stripplot.pars$pch)
@@ -498,7 +498,7 @@ boxplot.panel <- function(x, y, type, axis.pars, xpos, ypos, xylim) {
                    gp=gpar(box.umbrella=list(col="black")))
     if (type=="stripplot")
       panel.stripplot(cat.var, cont.var, horizontal=horiz,
-                      jitter=stripplot.pars$jitter,
+                      jitter.data=stripplot.pars$jitter,
                       col=stripplot.pars$col,
                       cex=stripplot.pars$size,
                       pch=stripplot.pars$pch)
@@ -561,8 +561,8 @@ diag.panel <- function(x, varname, diag.pars, axis.pars, xpos, ypos, xylim) {
   N <- ncol(x)
   vp.main <- viewport(x=outer.margins$bottom,
                       y=outer.margins$left,
-                      w=unit(1, "npc")-outer.margins$right-outer.margins$left,
-                      h=unit(1, "npc")-outer.margins$top-outer.margins$bottom,
+                      width=unit(1, "npc")-outer.margins$right-outer.margins$left,
+                      height=unit(1, "npc")-outer.margins$top-outer.margins$bottom,
                       just=c("left", "bottom"),
                       name="main", clip="off")
   pushViewport(vp.main)
@@ -576,12 +576,12 @@ diag.panel <- function(x, varname, diag.pars, axis.pars, xpos, ypos, xylim) {
       x[is.infinite(x[,j]),j] <- NA
 
       vp <- viewport(x=(labelj-1)/N, y=1-i/N,
-                     w=1/N, h=1/N,
+                     width=1/N, height=1/N,
                      just=c("left", "bottom"),
                      name=as.character(i*N+j))
       pushViewport(vp)
       
-      vp.in <- viewport(x=0.5, y=0.5, w=1-gap, h=1-gap,
+      vp.in <- viewport(x=0.5, y=0.5, width=1-gap, height=1-gap,
                         just=c("center", "center"),
                         name=paste("IN", as.character(i*N+j)))
       pushViewport(vp.in)

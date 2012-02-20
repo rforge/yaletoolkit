@@ -1,6 +1,6 @@
 Package: barcode
-Version: 1.0
-Date: 2011-06-27
+Version: 1.1
+Date: 2012-02-19
 Title: Barcode distribution plots
 Author: John W. Emerson and Walton A. Green and John A. Hartigan
 Maintainer: John W. Emerson <john.emerson@yale.edu>
@@ -8,4 +8,4 @@ Depends: grid, lattice
 Enhances: gpairs
 Description: This package includes the function \code{barcode()}, which produces a histogram-like plot of a distribution that shows granularity in the data.
 License: GPL (>= 2)
-Copyright: (C) 2011 John W. Emerson and Walton A. Green and John A. Hartigan
+Copyright: (C) 2012 John W. Emerson and Walton A. Green and John A. Hartigan

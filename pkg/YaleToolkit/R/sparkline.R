@@ -86,8 +86,8 @@ function(s,
 
   if (!is.null(margin.pars)) grid.rect(gp = margin.pars)
   outer.margins <- viewport(x = margins[2], y = margins[1],
-                    w = unit(1, 'npc') - margins[2] - margins[4],
-            h = unit(1, 'npc') - margins[1] - margins[3],
+                    width = unit(1, 'npc') - margins[2] - margins[4],
+            height = unit(1, 'npc') - margins[1] - margins[3],
             just = c('left', 'bottom'))
   pushViewport(outer.margins)
 
@@ -97,8 +97,8 @@ function(s,
                                 just = 'left', gp=gpar(fontface='plain'))
 
   if (xaxis==TRUE || xaxis=='exterior') { 
-    outervp = viewport(x = unit(0.5, "npc"), y=unit(0.5, "npc"),
-                       w = unit(1, "npc"), h=unit(1, "npc"),
+    outervp = viewport(x = unit(0.5, "npc"), y = unit(0.5, "npc"),
+                       width = unit(1, "npc"), height = unit(1, "npc"),
                        xscale = xlim, yscale = ylim, just = "center")
     pushViewport(outervp)
     grid.xaxis()
@@ -108,8 +108,8 @@ function(s,
 
   subvp <- viewport(x = unit(0.5, 'npc'),
                     y = unit(0.5, 'npc'),
-                    w = unit(1, 'npc'),
-                    h = unit(1, 'npc') - 2 * buffer,
+                    width = unit(1, 'npc'),
+                    height = unit(1, 'npc') - 2 * buffer,
                     xscale = unit(xlim, "native"),
                     yscale = unit(ylim, "native"),
                     just = 'center')

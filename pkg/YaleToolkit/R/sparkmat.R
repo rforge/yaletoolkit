@@ -73,7 +73,7 @@ sparkmat <- function(x,
     if (is.null(h)) h <- unit(1/mats.down, 'npc')
   } else {       ############ Added by Jay 11/3/06
     if (new) {
-      pushViewport(viewport(x=0.15, y=0.1, w=0.75, h=0.75, 
+      pushViewport(viewport(x=0.15, y=0.1, width=0.75, height=0.75, 
                             just=c("left", "bottom"),
                             xscale=range(pretty(locs[,1])),
                             yscale=range(pretty(locs[,2]))))
@@ -92,7 +92,7 @@ sparkmat <- function(x,
     else yloc <- unit(locs[i,2], "native")
 			
     sparklines.viewport <- viewport(x=xloc, y=yloc,
-                                    just=just, w=w, h=h)
+                                    just=just, width=w, height=h)
     pushViewport(sparklines.viewport)
     if (!is.null(tile.pars)) grid.rect(gp=tile.pars)
     sparklines(x[[i]], new=FALSE, lcol=lcol, yscale=yscales,

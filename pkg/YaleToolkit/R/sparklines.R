@@ -57,8 +57,8 @@ function(ss,
 
   # A buffer if desired (default is not)...
   subvp <- viewport(x = outer.margin[2], y = outer.margin[1],
-                    w = unit(1, 'npc') - outer.margin[2] - outer.margin[4],
-            h = unit(1, 'npc') - outer.margin[1] - outer.margin[3],
+                    width = unit(1, 'npc') - outer.margin[2] - outer.margin[4],
+            height = unit(1, 'npc') - outer.margin[1] - outer.margin[3],
             just = c('left', 'bottom'))
   pushViewport(subvp)
 
