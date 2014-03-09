@@ -47,7 +47,7 @@ corrgram(x)
   \item{bwplot.pars}{\code{NULL}, passed to \code{bwplot} for producing boxplots.}
   \item{stripplot.pars}{\code{NULL} is equivalent to \code{list(pch = 1, size = unit(0.5, 'char'), col = 'black', jitter = FALSE)}.}
   \item{barcode.pars}{\code{NULL} is equivalent to \code{list(nint = 0, ptsize = unit(0.25, "char"), ptpch = 1, bcspace = NULL, use.points = FALSE)}.}
-  \item{mosaic.pars}{\code{NULL}. Currently, only \code{shade} and \code{gp_labels} are passed through to \code{strucplot} for producing mosaic tiles.}
+  \item{mosaic.pars}{\code{NULL}. Currently \code{shade}, \code{gp_labels}, \code{gp}, and \code{gp_args} are passed through to \code{strucplot} for producing mosaic tiles.}
   \item{axis.pars}{\code{NULL} is equivalent to \code{list(n.ticks = 5, fontsize = 9)}.}
   \item{diag.pars}{\code{NULL} is equivalent to \code{list(fontsize = 9, show.hist = TRUE, hist.color = 'black')}.}
   \item{whatis}{default is \code{FALSE}; \code{TRUE} returns \code{whatis(x)}.}
@@ -76,7 +76,7 @@ Friendly, M., 2002, "Corrgrams: Exploratory displays for correlation matrices." 
 
 Green, W. A. (2006) "Loosening the CLAMP: An exploratory graphical approach to the Climate Leaf Analysis Multivariate Program." \emph{Palaeontologia Electronica} 9(2):9A.
 }
-\author{John W. Emerson, Walton Green}
+\author{John W. Emerson, Walton Green; thanks to Michael Friendly for augmenting the functionality with arguments to \code{strucplot}.}
 \seealso{\code{\link{pairs}}, \code{\link{splom}}, \code{\link{mosaicplot}}, \code{\link[vcd]{strucplot}}, \code{\link{bwplot}}, \code{\link{barcode}}, \code{\link{stripplot}}.}
 \examples{
 

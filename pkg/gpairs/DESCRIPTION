@@ -1,6 +1,6 @@
 Package: gpairs
-Version: 1.1
-Date: 2012-02-19
+Version: 1.2
+Date: 2014-03-09
 Title: gpairs: The Generalized Pairs Plot
 Author: John W. Emerson and Walton A. Green
 Maintainer: John W. Emerson <john.emerson@yale.edu>
@@ -8,4 +8,4 @@ Depends: barcode, grid, lattice, vcd, MASS, colorspace
 Enhances: YaleToolkit
 Description: Produces a generalized pairs (gpairs) plot.
 License: GPL (>= 2)
-Copyright: (C) 2012 John W. Emerson and Walton A. Green
+Copyright: (C) 2014 John W. Emerson and Walton A. Green

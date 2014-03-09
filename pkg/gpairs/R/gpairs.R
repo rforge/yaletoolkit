@@ -1,3 +1,7 @@
+## Modified by M. Friendly 3/5/2014 9:01:30 AM
+## -  allow mosaic.pars$gp to be passed to strucplot(); defaults to NULL
+## -  allow mosaic.pars$gp_args to be passed to strucplot(); defaults to list()
+
 "gpairs" <- function(x,
                      upper.pars=list(scatter="points",
                                       conditional="barcode",
@@ -156,6 +160,7 @@ if (is.null(barcode.pars$bcspace)) { barcode.pars$bcspace <- NULL }
 if (is.null(barcode.pars$use.points)) { barcode.pars$use.points <- FALSE }
 
 if (is.null(mosaic.pars$gp_labels)) { mosaic.pars$gp_labels <- gpar(fontsize=9) }
+if (is.null(mosaic.pars$gp_args)) { mosaic.pars$gp_args <- list() }
 
 # Similar options for boxplot and others can be added, not needed yet.
 
@@ -400,6 +405,7 @@ mosaic.panel <- function(x, y, mosaic.pars, axis.pars, xpos, ypos) {
     strucplot(table(y,x), margins=c(0,0,0,0),
               newpage=FALSE, pop=FALSE, keep_aspect_ratio=FALSE,
               shade=mosaic.pars$shade, legend=FALSE,
+              gp=mosaic.pars$gp, gp_args=mosaic.pars$gp_args,
               labeling_args=list(tl_labels=c(xpos, !ypos),
                                  gp_labels=mosaic.pars$gp_labels,
                                  varnames=c(FALSE,FALSE),
@@ -408,6 +414,7 @@ mosaic.panel <- function(x, y, mosaic.pars, axis.pars, xpos, ypos) {
     if (is.null(xpos) & is.null(ypos)) {
       strucplot(table(y,x), margins=c(0,0,0,0),
                 shade=mosaic.pars$shade, legend=FALSE,
+                gp=mosaic.pars$gp, gp_args=mosaic.pars$gp_args,
                 newpage=FALSE, pop=FALSE, keep_aspect_ratio=FALSE,
                 labeling=NULL)
     } else {
@@ -415,6 +422,7 @@ mosaic.panel <- function(x, y, mosaic.pars, axis.pars, xpos, ypos) {
         strucplot(table(y,x), margins=c(0,0,0,0),
                   newpage=FALSE, pop=FALSE, keep_aspect_ratio=FALSE,
                   shade=mosaic.pars$shade, legend=FALSE,
+                  gp=mosaic.pars$gp, gp_args=mosaic.pars$gp_args,
                   labeling_args=list(labels=c(TRUE,FALSE),
                                      tl_labels=c(ypos, FALSE),
                                      gp_labels=mosaic.pars$gp_labels,
@@ -424,6 +432,7 @@ mosaic.panel <- function(x, y, mosaic.pars, axis.pars, xpos, ypos) {
         strucplot(table(y,x), margins=c(0,0,0,0),
                   newpage=FALSE, pop=FALSE, keep_aspect_ratio=FALSE,
                   shade=mosaic.pars$shade, legend=FALSE,
+                  gp=mosaic.pars$gp, gp_args=mosaic.pars$gp_args,
                   labeling_args=list(labels=c(FALSE,TRUE),
                                      tl_labels=c(FALSE, !xpos),
                                      gp_labels=mosaic.pars$gp_labels,
