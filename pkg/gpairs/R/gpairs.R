@@ -41,9 +41,9 @@
 #########################################################################
 # Basic sanity checks and initialization here: ##########################
 
-if (!require(grid)) stop("library(grid) is required and unavailable.\n\n")
-if (!require(lattice)) stop("library(lattice) is required and unavailable.\n\n")
-if (!require(vcd)) stop("library(vcd) is required and unavailable.\n\n")
+#if (!require(grid)) stop("library(grid) is required and unavailable.\n\n")
+#if (!require(lattice)) stop("library(lattice) is required and unavailable.\n\n")
+#if (!require(vcd)) stop("library(vcd) is required and unavailable.\n\n")
 
 if (!is.data.frame(x)) {
   if (is.matrix(x)) x <- as.data.frame(x)
